@@ -1,0 +1,26 @@
+#include <stdio.h>
+
+int main() {
+    int N, i = 2, isPrime = 1;
+
+    scanf("%d", &N);
+
+    if (N <= 1) {
+        isPrime = 0; // 0 and 1 are not prime
+    } else {
+        while (i < N) {
+            if (N % i == 0) {
+                isPrime = 0; // divisible by i, not prime
+                break;
+            }
+            i++;
+        }
+    }
+
+    if (isPrime)
+        printf("YES\n");
+    else
+        printf("NO\n");
+
+    return 0;
+}
