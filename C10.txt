@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int T, A, B, i;
+
+    scanf("%d", &T); // number of test cases
+
+    for (i = 0; i < T; i++) {
+        scanf("%d %d", &A, &B); // input two numbers
+        printf("%d\n", A + B);  // output their sum
+    }
+
+    return 0;
+}
