@@ -1,13 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int T, A, B, i;
+    int T;
+    scanf("%d", &T);
 
-    scanf("%d", &T); // number of test cases
+    while (T--) {
+        int X, Y;
+        scanf("%d %d", &X, &Y);
 
-    for (i = 0; i < T; i++) {
-        scanf("%d %d", &A, &B); // input two numbers
-        printf("%d\n", A + B);  // output their sum
+        if (X + Y > 6) {
+            printf("YES\n");
+        } else {
+            printf("NO\n");
+        }
     }
 
     return 0;
