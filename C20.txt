@@ -1,0 +1,45 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int single = 0, doubleDigit = 0;
+    int multiple3 = 0, multiple5 = 0;
+    int positive = 0, negative = 0;
+
+    for(int i = 0; i < 5; i++) {
+        scanf("%d", &n);
+
+        // Single-digit (exclude 0)
+        if(n >= -9 && n <= 9 && n != 0)
+            single++;
+
+        // Double-digit
+        if((n >= 10 && n <= 99) || (n <= -10 && n >= -99))
+            doubleDigit++;
+
+        // Multiple of 3 (exclude 0)
+        if(n != 0 && n % 3 == 0)
+            multiple3++;
+
+        // Multiple of 5 (exclude 0)
+        if(n != 0 && n % 5 == 0)
+            multiple5++;
+
+        // Positive
+        if(n > 0)
+            positive++;
+
+        // Negative
+        if(n < 0)
+            negative++;
+    }
+
+    printf("%d\n", single);
+    printf("%d\n", doubleDigit);
+    printf("%d\n", multiple3);
+    printf("%d\n", multiple5);
+    printf("%d\n", positive);
+    printf("%d\n", negative);
+
+    return 0;
+}
