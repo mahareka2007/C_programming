@@ -1,0 +1,48 @@
+#include <stdio.h>
+
+int main() {
+    int n;
+    int bill = 0, noBill = 0;
+    int valid = 0, invalid = 0, excess = 0;
+
+    for(int i = 0; i < 5; i++) {
+        scanf("%d", &n);
+
+        // Invalid
+        if(n < 0) {
+            invalid++;
+        }
+
+        // Valid
+        if(n >= 0) {
+            valid++;
+        }
+
+        // No Bill (0 to 100)
+        if(n == 0) {
+            noBill++;
+        }
+        if(n >= 1 && n <= 100) {
+            noBill++;
+        }
+
+        // Bill (101 and above)
+        if(n >= 101 && n <= 500) {
+            bill++;
+        }
+
+        // Excess (>500)
+        if(n > 500) {
+            excess++;
+            bill++;   // Excess is also Bill
+        }
+    }
+
+    printf("%d\n", bill);
+    printf("%d\n", noBill);
+    printf("%d\n", valid);
+    printf("%d\n", invalid);
+    printf("%d\n", excess);
+
+    return 0;
+}
