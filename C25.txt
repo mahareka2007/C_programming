@@ -1,0 +1,18 @@
+#include<stdio.h>
+int main(){
+    int age;
+    scanf("%d",&age);
+    if(age<10){
+        printf("Children:$20");
+    }
+    else if(age<20){
+        printf("Teenage:$60");
+    }
+    else if(age<30){
+        printf("Adult:$100");
+    }
+    else{
+        printf("Senior:$130");
+    }
+    return 0;
+}
