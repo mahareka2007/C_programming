@@ -1,0 +1,19 @@
+#include <stdio.h>
+int main(){
+    int symptoms;
+    scanf("%d",&symptoms);
+    if(symptoms>=5){
+        printf("high priority");
+    }
+    else if(symptoms>=3 && symptoms<=4 ){
+        printf("moderate");
+    }
+    else if(symptoms<3){
+        printf("normal");
+    }
+    else{
+        printf("nothing");
+    }
+    return 0;
+    
+}
