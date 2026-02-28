@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+    int angle;
+    scanf("%d",&angle);
+    if(angle == 0){
+        printf("east");
+    }
+    else if(angle == 90){
+        printf("north");
+    }
+    else if(angle == 180){
+        printf("west");
+    }
+    else if(angle == 270){
+        printf("south");
+    }
+    else{
+        printf("invalid");
+    }
+    return 0;
+}
