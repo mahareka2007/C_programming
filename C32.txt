@@ -1,0 +1,26 @@
+def get_food_recommendation(age):
+    if age <= 5:
+        return "Mashed vegetables or soft fruits."
+    elif 6 <= age <= 12:
+        return "Healthy snacks and balanced meals."
+    elif 13 <= age <= 18:
+        return "Burgers or pasta."
+    elif 19 <= age <= 50:
+        return "Balanced diet with proteins and veggies."
+    elif age >= 51:
+        return "Soup or grilled fish."
+    else:
+        return "Invalid age range."
+
+def main():
+    try:
+        age = int(input("Enter your age: "))
+        if age < 0:
+            print("Error: Age cannot be negative.")
+        else:
+            print(f"Food recommendation: {get_food_recommendation(age)}")
+    except ValueError:
+        print("Error: Please enter a valid numeric age.")
+
+if __name__ == "__main__":
+    main()
