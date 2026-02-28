@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main(){
+    int a,b,c;
+    int age;
+    scanf("%d",&age);
+    if(a<=5){
+        printf("Mashed vegetables/soft fruits");
+    }
+    else if(age>=13 && age<=18){
+        printf("Burger or pasta");
+    }
+    else if(age>=51){
+        printf("soup or grilled fish");
+    }
+    else{
+        printf("normal");
+    }
+    return 0;
+}
+
+
+
+
+
+9th  program
