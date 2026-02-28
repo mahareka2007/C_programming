@@ -1,0 +1,17 @@
+#include <stdio.h>
+int main(){
+    int salary,grosssalary;
+    float HRA = 0.30,DA = 0.80;
+    scanf("%d",&salary);
+    if(salary<=70000){
+        HRA = salary*0.30;
+        DA = salary*0.80;
+    }
+    else{
+        printf("invaild");
+    }
+    grosssalary = salary+HRA+DA;
+    printf("grosssalary= %d",grosssalary);
+    return 0 ;
+    
+}
